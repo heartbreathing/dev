@@ -1,0 +1,111 @@
+SPA:
+a single page application transfers most of the processing work to the client side, which allows the user to load a single HTML page and dynamically update the content on that page, without refreshing it, as they interact with the application.
+
+● Modern Javascript Syntax (ES6)
+this inside an arrow function always refers to this from the outer context.
+ 
+arrow functions can never be used as constructor functions. Hence, they can never be invoked with the new keyword
+ 
+In arrow function, function get hoisted where you define. So, if you call the function before initialisation you will get referenceError.
+
+ 
+In regular function, this value is dynamic, In arrow function it equals to this of the outer function.
+
+
+
+
+
+
+
+
+ES6:
+1. This: 'this' is a javascript internal function that refers to the current objects it's in.
+2. Arrow functions: are used to write function shorter.
+3. Higher-order functions: used to manipulate arrays and objects. A higher-order function is a function that takes a function as an argument and returns a function as a result. （filter/map/forEach）
+4. Destructuring：Saving values of object to variables
+5. Spread：Cloning an object，merge two objects
+6. Ternary operator：Writing the if statement it in a shorter way:condition ? "If true" : "If false"
+7. Classes
+8. Component thinking：In react we will reuse code multiple times to make the project more efficient.
+
+
+● Node Package Manager and how to install 3rd party libraries
+
+It’s where we get code and solutions from other developers.
+Npm commands: 
+npm init 
+npm install // installing everything in package-lock.json
+npm uninstall <package_name>
+
+
+● Component lifecycle in React
+The life cycle of a component refers to the process from the creation of the component to the mounting to the page, and then to the unmounting of the component when it is not in use. Only class components have a lifecycle.
+ Life cycle:
+1. Mounting - The mounting phase is when a new component is created and inserted
+into the DOM or, in other words, when the life of a component begins. This can only
+happen once, and is often called “initial render.”
+2. Updating- The updating phase is when the component updates or re-renders. This
+reaction is triggered when the props are updated or when the state is updated. This
+phase can occur multiple times, which is kind of the point of React.
+3. Unmounting - The last phase within a component's lifecycle is the unmounting phase,
+when the component is removed from the DOM.
+ 
+
+We can declare special methods on the component class to run some code when a component mounts and unmounts: componentDidMount() { } componentWillUnmount() { }
+These methods are called “lifecycle methods”.
+
+● Using and understand the logic of a Hook
+Hooks are functions that let you “hook into” React state and lifecycle features from function components.
+Hooks let you use state and other React features without writing a class.
+Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data), rather than forcing a split based on lifecycle methods.
+Hooks let you use more of React’s features without classes.
+Hooks don’t work inside classes. 
+Rules of Hooks
+1.	Only call Hooks at the top level.
+2.	Only call Hooks from React function components.
+
+● Search Engine Optimization in a single-page application
+React(SPA) is bad for SEO:
+React gives us a SPA (Single Page Application) which requires Javascript to show the content on the page. But the problem is that the Google crawl bot, that scans all the pages on the internet, isn’t as good as understanding a page with javascript compared with a page that consists of regular HTML-code. 
+(For a long while Google couldn’t at all see the content that was rendered with Javascript. ) That’s why we need to prerender or use server side rendering 
+Some Best SEO Practices for SPA:
+1. Server-Side Rendering：SSR helps to make your page search engine crawler friendly regardless of whether the crawler runs JavaScript.
+2. Pre-Rendering：run the SPA on a headless browser in the development environment，then take a snapshot of the page output, and then substitute the HTML files with this snapshot in the response to the server request.
+3. SEO Friendly URLs: pushing the SPA to two output lengths, an ID URL and a slug URL. The ID URL contains the unique IDs associated with each fragment of content that is going to be presented on the page. The purpose of this URL is to enable your router to pull out the relevant content type(s) and utilize it in your component. As for the Slug URL, it contains actual words separated by hyphens which makes it easier for your end-user to read and share.
+4. Meta Tags
+5. Internal Links
+6. XML Sitemap
+
+
+● Understand the benefits and be able to build a Single-Page Application
+SPA - A single page application is a single page (hence the name) where a lot of information stays the same and only a few pieces need to be updated at a time. The SPA only sends what you need with each click, and your browser renders that information. This is different than a traditional page load where the server rerenders a full page with every click you make and sends it to your browser. Gets you all components, waits for changes in DOM and gives direct feedback on changes.
+Advantages of Single Page Applications
+1.	A Single-time File Load Each For HTML, CSS, JS
+2.	No Extra Queries to Server
+3.	Fast and Responsive Front-end Building
+4.	Enhanced User Experiences
+
+● Publish a single-page application
+Push the code to the github and publish it with netlify.
+ 
+
+1.Included evidence and explanation that you understand and know 
+how to apply skills that covers …
+● Modern Javascript Syntax (ES6)
+● Node Package Manager and how to install 3rd party 
+libraries
+● Component lifecycle in React
+● Search Engine Optimization in a single-page application
+● Understand the benefits and be able to build a Single-Page 
+Application
+● Publish a single-page application 
+2.Deeper level of reflection, possibly based on actions (include but 
+not limited):
+● Using and understand the logic of a Hook
+● Reason around when is suitable to use SPA VS when to 
+use other methods
+● Utilising third party libraries
+● Reason around how to structure a React application well in 
+regards to components, state and data flow
+● Reason around performance optimization techniques in 
+React
